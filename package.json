@@ -1,9 +1,16 @@
 {
+  "homepage": "https://Abelmesfin0954.github.io/abel_mesfin",
   "name": "spaceportfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "react": "^18.3.1",
+"react-dom": "^18.3.1",
+"@react-three/fiber": "^8.18.0",
     "dev": "next dev",
+    "vercel-build": "npm install --legacy-peer-deps && next build",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -42,3 +49,4 @@
     "typescript": "^5"
   }
 }
+
