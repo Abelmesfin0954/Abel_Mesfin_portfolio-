@@ -20,7 +20,7 @@ const TerminalSection = () => {
         <div className="text-green-400">
           <div className="flex items-center mb-2">
             <FiTerminal className="mr-2" />
-            <p className="text-xl font-bold">Abel Rodriguez - Interactive Portfolio v3.0</p>
+            <p className="text-xl font-bold">Abel Mesfin - Interactive Portfolio v3.0</p>
           </div>
           <p className="text-lg">Senior Full Stack Developer | Cloud Architect | TypeScript Expert</p>
           <p className="mt-3">Type <span className="text-yellow-300 font-mono">help</span> to see available commands</p>
@@ -40,11 +40,11 @@ const TerminalSection = () => {
   // Complete Abel Rodriguez profile data
   const profile = {
     personal: {
-      name: "Abel Rodriguez",
+      name: "Abel Mesfin",
       title: "Senior Full Stack Developer",
       email: "abel.rodriguez@dev.io",
-      phone: "+1 (415) 555-8923",
-      location: "San Francisco, CA",
+      phone: "+251954889050",
+      location: "Addis Ababa, Ethiopan",
       availability: "Open to new opportunities",
       website: "https://abel-dev.io",
       github: "https://github.com/abel-dev",
@@ -54,7 +54,7 @@ const TerminalSection = () => {
     education: {
       degree: "B.Sc. Computer Science",
       university: "Stanford University",
-      year: "2016",
+      year: "2024",
       honors: "Graduated with Honors (GPA: 3.8/4.0)",
       thesis: "Optimizing React Rendering Performance in Large-Scale Applications"
     },
@@ -86,7 +86,7 @@ const TerminalSection = () => {
       {
         role: "Lead Full Stack Developer",
         company: "TechNova Inc.",
-        period: "2021 - Present",
+        period: "2024 - Present",
         location: "San Francisco, CA",
         achievements: [
           "Led migration from monolithic to microservices architecture, improving scalability by 300%",
@@ -99,7 +99,7 @@ const TerminalSection = () => {
       {
         role: "Senior Frontend Engineer",
         company: "Digital Solutions LLC",
-        period: "2018 - 2021",
+        period: "2022 - 2024",
         location: "Remote",
         achievements: [
           "Spearheaded TypeScript adoption across all frontend projects",
@@ -112,7 +112,7 @@ const TerminalSection = () => {
       {
         role: "Full Stack Developer",
         company: "WebCraft Studios",
-        period: "2016 - 2018",
+        period: "2023 - 2024",
         location: "Palo Alto, CA",
         achievements: [
           "Developed 15+ client websites with 100% on-time delivery",
@@ -143,7 +143,7 @@ const TerminalSection = () => {
         description: "GPT-4 powered content creation platform with collaborative editing and version control",
         role: "Architect",
         tech: ["React", "Python", "OpenAI API", "Firebase", "GCP"],
-        year: "2022",
+        year: "2024",
         link: "https://aicontent.abel-dev.io",
         features: [
           "Real-time collaborative editing",
@@ -157,7 +157,7 @@ const TerminalSection = () => {
         description: "Centralized monitoring for cloud infrastructure across AWS, GCP and Azure",
         role: "Sole Developer",
         tech: ["React", "WebSockets", "AWS", "Terraform", "Kubernetes"],
-        year: "2021",
+        year: "2024",
         link: "https://cloudops.abel-dev.io",
         features: [
           "Real-time resource monitoring",

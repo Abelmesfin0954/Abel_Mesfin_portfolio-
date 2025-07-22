@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ShoppingCart, Zap, CheckCircle } from "lucide-react";
@@ -6,11 +7,11 @@ import { ShoppingCart, Zap, CheckCircle } from "lucide-react";
 const products = [
   {
     name: "Starter Website",
-    price: "$499",
+    price: "ETB499",
     amount: "499",
     features: ["3 Custom Pages", "Mobile Responsive", "Basic SEO Setup", "1 Month Support"],
     popular: false,
-    icon: <Zap className="w-6 h-6 text-blue-500" />
+    icon: <Zap className="w-6 h-6 text-blue-500" />,
   },
   {
     name: "Business Website",
@@ -18,7 +19,7 @@ const products = [
     amount: "999",
     features: ["5-7 Custom Pages", "CMS Integration", "Advanced SEO", "3 Months Support", "Basic Analytics"],
     popular: true,
-    icon: <ShoppingCart className="w-6 h-6 text-purple-500" />
+    icon: <ShoppingCart className="w-6 h-6 text-purple-500" />,
   },
   {
     name: "E-Commerce Pro",
@@ -30,11 +31,11 @@ const products = [
       "Payment Gateway",
       "6 Months Support",
       "Advanced Analytics",
-      "Marketing Setup"
+      "Marketing Setup",
     ],
     popular: false,
-    icon: <CheckCircle className="w-6 h-6 text-green-500" />
-  }
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />,
+  },
 ];
 
 export default function ProductList() {
@@ -45,39 +46,39 @@ export default function ProductList() {
     const tx_ref = `tx-${Date.now()}`;
 
     try {
-      const response = await fetch("https://api.chapa.co/v1/transaction/initialize", {
+      const response = await fetch("/api/chapa", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer YOUR_CHAPA_SECRET_KEY` // Replace this with your real secret key
         },
         body: JSON.stringify({
           amount,
           currency: "ETB",
-          email: "abelmesfin@example.com",  // Replace with real customer email if known
+          email: "abelmesfin@example.com",
           first_name: "Abel",
           last_name: "Mesfin",
           tx_ref,
-          callback_url: "https://yourdomain.com/api/callback", // Optional: for verifying success
-          return_url: "https://yourdomain.com/thank-you", // Required: after payment
+          callback_url: "https://{$filed}/api/callback",
+          return_url: "https://{$name}/thank-you",
           customization: {
             title: productName,
-            description: `Payment for ${productName}`
-          }
-        })
+            description: `Payment for ${productName}`,
+          },
+        }),
       });
 
       const data = await response.json();
 
-      if (data.status === "success") {
-        window.location.href = data.data.checkout_url;
-      } else {
-        alert("Payment failed. Please try again.");
-        console.log(data);
-      }
+    if (data.status === "success") {
+  window.location.href = data.data.checkout_url;
+} else {
+  alert("Payment failed. Try again.");
+  console.error("❌ Payment error:", data); // 👈 Now shows detailed error from API
+}
+
     } catch (error) {
-      alert("Error connecting to Chapa");
-      console.error(error);
+      alert("Connection error.");
+      console.error("Fetch error:", error);
     } finally {
       setLoading(false);
     }

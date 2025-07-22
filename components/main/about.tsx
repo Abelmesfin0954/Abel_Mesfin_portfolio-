@@ -42,7 +42,7 @@ const About = () => {
             variants={fadeInUp(0.2)}
             className="text-gray-300 max-w-3xl text-lg mb-6"
           >
-            I'm <span className="text-white font-semibold">Abel Mesfin</span>, a full-stack web developer based in Ethiopia. I build responsive and powerful websites using React, Node.js, TailwindCSS, and modern cloud solutions.
+            I m <span className="text-white font-semibold">Abel Mesfin</span>, a full-stack web developer based in Ethiopia. I build responsive and powerful websites using React, Node.js, TailwindCSS, and modern cloud solutions.
           </motion.p>
 
           {/* Skills Cards */}
